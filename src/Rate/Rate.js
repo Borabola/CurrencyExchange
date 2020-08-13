@@ -1,5 +1,6 @@
 import React from 'react';
 import './Rate.css';
+import Calc from '../Calc/Calc';
 
 class Rate extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Rate extends React.Component {
                 for(let item of this.currency) {
                     result[item] = data.rates[item];
                 }
+                console.log('result');
                 console.log(result);
                 this.setState({currencyRate: result});
             });
@@ -37,22 +39,19 @@ class Rate extends React.Component {
            <div className="rate">
                <h3> Курс валют на {this.state.date}</h3>
                         <div className="flex-container">
-                            <div className="block flex-item">
-                                <div className="currency-name">USD</div>
-                                <div className="currency-in">1500 Kr</div>
-                                <div className="currency-out">1200 Kr</div>
-                            </div>
-                            <div className="block flex-item">
-                                <div className="currency-name">USD</div>
-                                <div className="currency-in">1500 Kr</div>
-                                <div className="currency-out">1200 Kr</div>
-                            </div>
-                            <div className="block flex-item">
-                                <div className="currency-name">USD</div>
-                                <div className="currency-in">1500 Kr</div>
-                                <div className="currency-out">1200 Kr</div>
-                            </div>
+                            {Object.keys(this.state.currencyRate).map((keyName, i) => 
+                            (
+                            <div className="block flex-item" key={keyName}>
+                                <div className="currency-name">{keyName}</div>
+                                <div className="currency-in">{this.state.currencyRate[keyName].toFixed(2)}*</div>
+                                <p>Можно купить за 1EUR</p>
+                                
+                            </div> 
+                            ))}
+                
                         </div>
+                <Calc rate={this.state.currencyRate} />        
+
            </div>          )
       }
   }

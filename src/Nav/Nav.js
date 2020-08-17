@@ -1,22 +1,20 @@
 import React from 'react';
 import './Nav.css';
 
+
+
 class Nav extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          text: "Hello"
-      };
-    }
+  
       render(){
+        let nav = this.props.nav;
           return(
             <div className="header-nav">
                 <div className="container">
                     <nav>
                         <ul>
-                           {/*  <li><a href="#">Главная</a></li>
-                            <li><a href="#">Пункты обмена</a></li>
-                            <li><a href="#">Контакты</a></li>*/}
+                            {nav.map((element, i) => {
+                                return <li key={i}><a href={element.link}>{element.title}</a></li>
+                            })}
                         </ul>
                     </nav>
                 </div>
@@ -24,5 +22,8 @@ class Nav extends React.Component {
           )
       }
   }
+
+  // <ul>
+  
 
 export default Nav;

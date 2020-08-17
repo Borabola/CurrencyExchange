@@ -3,13 +3,8 @@ import './Header.css';
 import Nav from '../Nav/Nav'
 
 class Header extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          text: "Hello"
-      };
-    }
       render(){
+        let nav = this.props.nav;
           return(
                 <header>
                   <div className="top-bar animate-dropdown"></div>
@@ -19,7 +14,7 @@ class Header extends React.Component {
 
                       </div>
                   </div>
-                  <Nav />
+                  <Nav nav={nav}/>
                 </header>
           )
       }

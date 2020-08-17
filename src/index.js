@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+let nav = [
+  {title: 'Главная',
+  link: '/'},
+  {title: 'Пункты обмена',
+  link: '/points'},
+  {title: 'О нас',
+  link: '/about'},
+]
+
 ReactDOM.render(
   
-    <App />,
+    <App nav={nav} />,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

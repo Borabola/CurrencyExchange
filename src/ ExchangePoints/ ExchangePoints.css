@@ -1,0 +1,12 @@
+.point-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.points-title {
+    margin-bottom: 60px;
+}
+
+.point-wrapper ul {
+    margin-right: 60px;
+}

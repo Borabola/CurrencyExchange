@@ -54,3 +54,13 @@
     font-size: 1.3rem;
     font-weight: bold;
 }
+
+.rate h3 {
+    margin-bottom: 30px;
+}
+.rate h4 {
+    margin-bottom: 15px;
+}
+.rate__base input {
+    margin-right: 5%;
+}

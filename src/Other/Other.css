@@ -1,0 +1,26 @@
+.other h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.other h2 {
+    margin-bottom: 5px;
+}
+.other p {
+    margin-bottom: 20px;
+}
+
+.other a {
+    color: #3b621c;
+    text-decoration: none;
+}
+.other a:hover {
+    text-decoration: underline;
+}
+
+.other ul {
+    padding-left: 40px;
+} 
+
+.other li {
+    margin-bottom: 10px;
+}

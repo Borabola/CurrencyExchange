@@ -8,6 +8,7 @@ import Footer from './Footer/Footer';
 import Rate from './Rate/Rate';
 import About from './About/About';
 import Points from './ ExchangePoints/ ExchangePoints';
+import Other from './Other/Other';
 
 
 
@@ -48,6 +49,8 @@ class App extends React.Component {
                           <Route exact path="/" component={Rate} />
                           <Route exact path="/points" component={Points} />
                           <Route exact path="/about" component={About} />
+                          <Route  render = { (props) =>
+                            <Other { ...props} nav={nav}/>} />
 
                         </Switch>
                       </Router>

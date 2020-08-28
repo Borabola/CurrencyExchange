@@ -6,8 +6,8 @@ class Calc extends React.Component {
       super(props);
       this.state = {
           result: 0,
-          
       }
+
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -17,8 +17,6 @@ class Calc extends React.Component {
     calcRate = (evt) => {
         evt.preventDefault();
         let elements = evt.target.elements;
-        console.log(elements["count-currency"].value);
-        console.log(elements["type-currency"].value);
         let countCurrency = elements["count-currency"].value;
         let typeCurrency = elements["type-currency"].value;
         this.setState({result: ((countCurrency / this.state.rate[typeCurrency]).toFixed(2))})
